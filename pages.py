@@ -1,4 +1,4 @@
-# pages.py  -  X4G v9.8
+q# pages.py  -  X4G v9.8
 # شامل: LOGIN_HTML, DASHBOARD_HTML, get_public_page_html()
 
 # لوگوی X4G (به‌صورت base64 داخلی، بدون نیاز به هاست خارجی)
