@@ -24,7 +24,12 @@ logger = logging.getLogger("X4G")
 IRAN_TZ = ZoneInfo("Asia/Tehran")
 
 app = FastAPI(title="X4G", docs_url=None, redoc_url=None)
+from pathlib import Path as _Path
+COMPANION_HTML = _Path(__file__).with_name("companion_app.html").read_text(encoding="utf-8")
 
+@app.get("/app", response_class=HTMLResponse)
+async def companion_app():
+    return HTMLResponse(content=COMPANION_HTML)
 # ── Persistence ───────────────────────────────────────────────────────────────
 DATA_DIR = Path(os.environ.get("DATA_DIR", "/data"))
 DATA_FILE = DATA_DIR / "x4g_state.json"
