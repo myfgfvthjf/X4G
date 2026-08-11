@@ -29,6 +29,10 @@ body{font-family:'Vazirmatn',sans-serif;background:var(--bg);display:flex;align-
 .brand-img{width:48px;height:48px;border-radius:50%;overflow:hidden;border:1px solid var(--border);box-shadow:0 0 20px rgba(139,92,246,0.35),0 0 12px rgba(59,130,246,0.3);flex-shrink:0}
 .brand-img img{width:100%;height:100%;object-fit:cover}
 .brand-name{font-size:16px;font-weight:700;color:var(--text)}
+@keyframes logoSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes logoGlow{0%,100%{box-shadow:0 0 10px rgba(234,179,8,.35)}50%{box-shadow:0 0 22px rgba(234,179,8,.7)}}
+.brand-img{animation:logoGlow 2.4s ease-in-out infinite}
+.brand-img img{animation:logoSpin 8s linear infinite}
 .brand-sub{font-size:11px;color:var(--dim);margin-top:2px}
 h1{font-size:21px;font-weight:700;color:var(--text);margin-bottom:5px;letter-spacing:-.02em}
 .sub{font-size:12px;color:var(--mid);margin-bottom:24px;line-height:1.6}
