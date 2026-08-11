@@ -150,6 +150,10 @@ a{color:inherit;text-decoration:none}
 .logo{display:flex;align-items:center;gap:12px;padding:20px 16px 16px;border-bottom:1px solid var(--card-b)}
 .logo-img{width:38px;height:38px;border-radius:50%;overflow:hidden;border:1px solid var(--card-b);box-shadow:0 0 14px rgba(139,92,246,.3),0 0 8px rgba(59,130,246,.25);flex-shrink:0}
 .logo-img img{width:100%;height:100%;object-fit:cover}
+@keyframes logoSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes logoGlow{0%,100%{box-shadow:0 0 10px rgba(234,179,8,.35)}50%{box-shadow:0 0 22px rgba(234,179,8,.7)}}
+.logo-img,.mob-logo{animation:logoGlow 2.4s ease-in-out infinite}
+.logo-img img,.mob-logo img{animation:logoSpin 8s linear infinite}
 .logo-name{font-size:13.5px;font-weight:700;color:var(--t1)}
 .logo-sub{font-size:10px;color:var(--t3);margin-top:1px}
 .sb-close{display:none;position:absolute;left:12px;top:20px;background:var(--accent-d);border:1px solid var(--card-b);color:var(--t2);width:30px;height:30px;border-radius:8px;font-size:16px;align-items:center;justify-content:center;cursor:pointer}
